@@ -2,9 +2,13 @@ Spuds
 =====
 **A Teensylu / Printrboard Mashup**
 
-The Printrboard electronic set was designed by members of the Printrbot team in order to eliminate the production and functionality shortcomings of older RepRap electronics sets. Printrboard improves upon the previous production-grade electronics set (Gen6) by adding heatbed and SD card support, reverting to 1/16 microstepping Allegro stepper drivers, and improving connectivity reliability and reducing cost by elimination of the FTDI UART chip. Printrboard also has expansion headers supporting I2C, SPI, UART, and ADC pins. All extra I/O ports of the AT90USB have been broken out to headers for prototyping and expansion.
+Spuds was born from mashing together the concepts of both the Teensylu and Printrboard (itself a development of the Teensylu concept). The aim was to take the positives provided by the Printrboard design and incorporate some additions such as LED indicators on the MOSFETs, an additional PWM Fan header and an extra PWM Output header pin. It then reintroduced the modular Stepper Driver setup, as for many, the onboard Allegro drivers of the Printrboard are seen as a drawback as it limits options and replacement/repair. 
 
-Printrboard is a derivative of Teensylu, an AT90USB1286 development board originally based on Sanguinololu. The Atmel AT90USB1286 MCU has on-chip USB, removing the need for the FTDI UART (USB-to-serial) IC. On-chip USB means dramatically faster firmware upload times and communication. The AT90USB connects at any baud rate regardless of firmware configuration, and operates virtually free of serial communication errors/pauses.
+Spuds has expansion headers supporting I2C, SPI, UART, and ADC pins. All extra I/O ports of the AT90USB have been broken out to headers for prototyping and expansion. It follows the footprint for headers that the Printrboard introduced to allow compatibility with other expansions devices such as LCD's and the Extrudr board. 
+
+The continued use of the AT90USB1286 used in the Teensylu and Printrboard means Spuds also has on-chip USB, removing the need for the FTDI UART (USB-to-serial) IC. On-chip USB means dramatically faster firmware upload times and communication. The AT90USB connects at any baud rate regardless of firmware configuration, and operates virtually free of serial communication errors/pauses.
+
+This board is currently in pre-release design phases, so is subject to changes!
 
 **Licence: _CC ShareAlike 3.0_**
 
@@ -15,7 +19,7 @@ Printrboard is a derivative of Teensylu, an AT90USB1286 development board origin
 ##Features
 * Small design - board is 100mm x 60mm (4" x 2.4")
 * Atmel AT90USB1286 Microcontroller (or AT90USB1287 drop-in compatible for 20mhz support)
- * Native USB interface. No FTDI serial-to-USB chip!
+ * Native USB interface. No FTDI serial-to-USB chip.
  * 128kb Flash
 * Modular Stepper Driver Support (Add/Replace as needed)
 * Solder Jumper Microstepping Selection
@@ -122,7 +126,7 @@ Connect directly to any 12VDC power supply.
 * 12VDC+ terminals are located behind.
 
 ####USB
-Choice of USB Connector (only one can be installed):
+Choice of USB Connector (only one can be installed). The Type-B connector is a good choice for long cable runs, as you can easily acquire heavily sheilded thick gauge USB cables as used for Printers. Micro-USB is perhaps a good choice if a small compact connection is required, or for interconnection to another controller system such as a tablet or RPi:
 * Micro-USB B Connector
 * Type-B USB Connector
 
