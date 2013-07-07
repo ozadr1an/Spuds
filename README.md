@@ -1,9 +1,12 @@
 Spuds
 =====
 
-A Teensylu / Printrboard Mashup
+_A Teensylu / Printrboard Mashup_
 
-
+######Licence: CC ShareAlike 3.0
+Attributions: 
+* Teensylu (StephS 2011) http://reprap.org/wiki/Teensylu
+* Printrboa (Laine Walker-Avina 2012) http://reprap.org/wiki/Printrboard
 ##Features
 
 * Small design - board is 100mm x 60mm (4" x 2.4")
