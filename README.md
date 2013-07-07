@@ -55,3 +55,58 @@ If you have an ISP or JTAG cable, you can also program an alternate bootloader f
 * Unzip to get BootloaderCDC.hex
 * Program using your favorite ISP/JTAG cable.
  * The command for avrdude is avrdude -p at90usb1286 -c <your programmer here> -U flash:w:BootloaderCDC.hex
+
+###Setup
+####Stepper Motors
+Connect the X, Y, Z axis, and extruder motors to the matching headers at the top of the Printrboard (X-MOT, Y-MOT, Z-MOT, E-MOT). Headers are 4 wire Molex KK series, part# 0022013047) with 2759 series crimp terminals, part# 0008550101. Motor pinout is:
+1. A - Phase 1+
+2. B - Phase 1-
+3. C - Phase 2+
+4. D - Phase 2-
+
+####Endstops
+Connect mechanical microswitches to the 3-pin Molex headers X-STOP, Y-STOP, Z-STOP at the bottom of the board. E-STOP is reserved for future use. Connect switches as follows:
+#####Standard Microswitches
+1. Switch NC
+2. No connection
+3. Switch COMMON
+
+#####For optos:
+1. Signal Output
+2. +5V or +12V
+3. GND
+
+####Heaters
+* LEDs are fitted to indicate when the MOSFET is active. These can be ommitted if desired. 
+* Connect the heating element of your hotend (resistor or nichrome wire) to the 4-pin EXTRUDER header, positioned next to MOSFET Q1. 
+* Connect your heatbed to the HOTBED header, next to MOSFET Q2. Polarity here is unimportant; pinout is as follows:
+
+1. Positive
+2. Positive
+3. Negative
+4. Negative
+
+####Thermistors
+Thermistor headers are 2-pin Molex headers at the right side of the board, located above the reset button.
+* Connect the HBP thermistor to the header directly above the reset button. 
+* The Extruder thermistor also connects above the reset button next to the HBP thermistor.
+
+####Low Power Fan
+A 2-pin Molex header labelled FAN is located on the right side of the board, above the thermistor headers. 
+* This optional header can be used to power a fan or other small motor.
+
+####Board Power
+All power is supplied through a choice of connector at the upper left corner of the Spuds, labelled PWR:
+* 4-pin ATX style header (Suitable for high current HBP)
+* 5.08mm 2-Pin Screw Terminal (Suitable for low current HBP only)
+
+Connect directly to any 12VDC power supply. 
+* Ground terminals are closest to the edge of the board
+* 12VDC+ terminals are located behind.
+
+####USB
+Choice of USB Connector (only one can be installed):
+* Micro-USB B Connector
+* Type-B USB Connector
+
+**Note that a jumper should _NOT_ be installed on the "BOOT" pins for normal operation (see _Bootloaders_ ).**
