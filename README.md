@@ -1,14 +1,18 @@
 Spuds
 =====
+**A Teensylu / Printrboard Mashup**
 
-_A Teensylu / Printrboard Mashup_
+The Printrboard electronic set was designed by members of the Printrbot team in order to eliminate the production and functionality shortcomings of older RepRap electronics sets. Printrboard improves upon the previous production-grade electronics set (Gen6) by adding heatbed and SD card support, reverting to 1/16 microstepping Allegro stepper drivers, and improving connectivity reliability and reducing cost by elimination of the FTDI UART chip. Printrboard also has expansion headers supporting I2C, SPI, UART, and ADC pins. All extra I/O ports of the AT90USB have been broken out to headers for prototyping and expansion.
 
-######Licence: CC ShareAlike 3.0
-Attributions: 
-* Teensylu (StephS 2011) http://reprap.org/wiki/Teensylu
-* Printrboa (Laine Walker-Avina 2012) http://reprap.org/wiki/Printrboard
+Printrboard is a derivative of Teensylu, an AT90USB1286 development board originally based on Sanguinololu. The Atmel AT90USB1286 MCU has on-chip USB, removing the need for the FTDI UART (USB-to-serial) IC. On-chip USB means dramatically faster firmware upload times and communication. The AT90USB connects at any baud rate regardless of firmware configuration, and operates virtually free of serial communication errors/pauses.
+
+**Licence: _CC ShareAlike 3.0_**
+
+**Attributions:**
+* **_Teensylu_** (StephS 2011) http://reprap.org/wiki/Teensylu
+* **_Printrboard_** (Laine Walker-Avina 2012) http://reprap.org/wiki/Printrboard
+
 ##Features
-
 * Small design - board is 100mm x 60mm (4" x 2.4")
 * Atmel AT90USB1286 Microcontroller (or AT90USB1287 drop-in compatible for 20mhz support)
  * Native USB interface. No FTDI serial-to-USB chip!
@@ -40,6 +44,16 @@ Attributions:
  * Additional 14 pin header with remaining I/O for prototyping
  * SMT Components sized at 0805, and no QFNs for easier soldering.
  * 2-Layer PCB to reduce manufacture cost & complexity
+
+####Benefits of this Design
+* Allows modular use of Stepper Drivers, allowing:
+ * User selection of driver used
+ * The re-use of existing drivers
+ * Replacement due to fault/failure.
+
+* Integrated USB controller provides 12MBps bandwidth, instead of usual slower serial comms via FTDI. Result: Virtually no serial communication errors and interruptions due to PC Activity reduced.
+* Integrated micro-SD Card slot
+* Uses small standard Molex connectors for motors, heater, and endstops.
 
 ####Revision History
 * V0.5 [July 2013]: Internal pre-production design.
