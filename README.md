@@ -1,7 +1,7 @@
 Spuds
 =====
 **A Teensylu / Printrboard Mashup**
-
+![Spuds-Board](/Images/Spuds-v0.6-Board.png)
 Spuds was born from mashing together the concepts of both the Teensylu and Printrboard (itself a development of the Teensylu concept). The aim was to take the positives provided by the Printrboard design and incorporate some additions such as LED indicators on the MOSFETs, an additional PWM Fan header and an extra PWM Output header pin. It then reintroduced the modular Stepper Driver setup, as for many, the onboard Allegro drivers of the Printrboard are seen as a drawback as it limits options and replacement/repair. 
 
 Spuds has expansion headers supporting I2C, SPI, UART, and ADC pins. All extra I/O ports of the AT90USB have been broken out to headers for prototyping and expansion. It follows the footprint for headers that the Printrboard introduced to allow compatibility with other expansions devices such as LCD's and the Extrudr board. 
@@ -48,6 +48,8 @@ This board is currently in pre-release design phases, so is subject to changes!
  * Additional 14 pin header with remaining I/O for prototyping
  * SMT Components sized at 0805, and no QFNs for easier soldering.
  * 2-Layer PCB to reduce manufacture cost & complexity
+
+![Spuds-Schematic](/Images/Spuds-v0.6-Schematic.png)
 
 ####Benefits of this Design
 * Allows modular use of Stepper Drivers, allowing:
