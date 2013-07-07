@@ -59,6 +59,9 @@ This board is currently in pre-release design phases, so is subject to changes!
 * Integrated micro-SD Card slot
 * Uses small standard Molex connectors for motors, heater, and endstops.
 
+####Bill of Materials
+Available via [GoogleDocs](https://docs.google.com/spreadsheet/ccc?key=0ArIeeziM0bp9dG5TbjlYaFVDQ0I5dkZXbHk2VjhtQlE&usp=sharing)
+
 ####Revision History
 * V0.5 [July 2013]: Internal pre-production design.
 
